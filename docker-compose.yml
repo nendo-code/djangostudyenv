@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: ./web
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
